@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">Color Palette Visualizer</p>
+        <h1>Paste any hex codes to build a palette instantly.</h1>
+        <p class="subhead">
+          Drop in JSON, CSS, design tokens, or any text. We will scan for hex codes
+          and render every color we find.
+        </p>
+      </header>
+
+      <section class="input-panel">
+        <label for="hex-input">Hex code input</label>
+        <textarea
+          id="hex-input"
+          placeholder='Example: {"brand": "#1E90FF", "accent": "#fef08a", "neutral": "#111827"}'
+          rows="6"
+        ></textarea>
+        <div class="controls">
+          <button id="render-btn" type="button">Render palette</button>
+          <span id="status" class="status">Waiting for input.</span>
+        </div>
+      </section>
+
+      <section class="palette-panel">
+        <div class="palette-header">
+          <h2>Palette</h2>
+          <span id="count" class="count">0 colors</span>
+        </div>
+        <div id="palette" class="palette"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
