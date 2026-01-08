@@ -4,7 +4,7 @@ const palette = document.getElementById("palette");
 const status = document.getElementById("status");
 const count = document.getElementById("count");
 
-const HEX_REGEX = /#?([0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})/g;
+const HEX_REGEX = /#?(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{4}|[0-9a-fA-F]{3})\b/g;
 
 const updateStatus = (message, tone = "default") => {
   status.textContent = message;
